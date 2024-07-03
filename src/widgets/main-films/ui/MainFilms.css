@@ -1,0 +1,15 @@
+.main-films{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-film{
+    border: solid 3px black;
+    width: 300px;
+    height: 300px;
+    margin:10px;
+}
+
+
+
+

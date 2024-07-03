@@ -1,0 +1,16 @@
+.premium-film{
+    border: solid 3px red;
+    width: 500px;
+    height: 500px;
+    margin:20px;
+}
+
+
+.premium-films{  
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: azure;
+}
