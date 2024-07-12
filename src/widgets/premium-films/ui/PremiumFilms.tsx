@@ -1,14 +1,15 @@
 import "./PremiumFilms.css"
+import PremiumFilm from "entities/premium-film/ui/PremiumFilm"
 
 function PremiumFilms(){
     return(
     <div className="premium-films">
-            <article className="premium-film"></article>
-            <article className="premium-film"></article>
-            <article className="premium-film"></article>
-            <article className="premium-film"></article>
-            <article className="premium-film"></article>
-            <article className="premium-film"></article>
+            <PremiumFilm/>
+            <PremiumFilm/>
+            <PremiumFilm/>
+            <PremiumFilm/>
+            <PremiumFilm/>
+            <PremiumFilm/>
     </div>
     )
 }

@@ -1,9 +1,11 @@
 .aside{
-    right: 0px;
+    left: 0px;
+    top: 0px;
     padding: 0px;
+    padding-top: 100px;
     border: solid green 3px;
     background-color: bisque;
-    height:87.7%;
+    height:100%;
     width:  60px;
     position: fixed;
     font-size: 50px;

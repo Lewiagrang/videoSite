@@ -1,19 +1,20 @@
 import "./MainFilms.css"
+import MainFilm from "entities/main-film/ui/MainFilm"
 
 function MainFilms(){
     return(
     <div className="main-films">
-        <article className="main-film"></article>
-        <article className="main-film"></article>
-        <article className="main-film"></article>
-        <article className="main-film"></article>
-        <article className="main-film"></article>
-        <article className="main-film"></article>
-        <article className="main-film"></article>
-        <article className="main-film"></article>
-        <article className="main-film"></article>  
-        <article className="main-film"></article>
-        <article className="main-film"></article>
+        <MainFilm/>
+        <MainFilm/>
+        <MainFilm/>
+        <MainFilm/>
+        <MainFilm/>
+        <MainFilm/>
+        <MainFilm/>
+        <MainFilm/>
+        <MainFilm/>  
+        <MainFilm/>
+        <MainFilm/>
     </div>
     )
 }

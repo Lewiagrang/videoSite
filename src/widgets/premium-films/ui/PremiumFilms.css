@@ -1,11 +1,3 @@
-.premium-film{
-    border: solid 3px red;
-    width: 500px;
-    height: 500px;
-    margin:20px;
-}
-
-
 .premium-films{  
     display: flex;
     flex-wrap: wrap;
