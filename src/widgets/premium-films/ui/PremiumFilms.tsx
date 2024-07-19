@@ -7,11 +7,8 @@ function PremiumFilms(){
             <PremiumFilm/>
             <PremiumFilm/>
             <PremiumFilm/>
-            <PremiumFilm/>
-            <PremiumFilm/>
-            <PremiumFilm/>
     </div>
     )
 }
 
-export default PremiumFilms
+export default PremiumFilms 

@@ -3,10 +3,10 @@ import "./Header.css"
 function Header(){
     return(
         <header className="header">
-          <a href="public.html">Главная</a>
-          <a href="public.html">Каталог</a>
-          <a href="public.html">Подписка</a>
-          <a href="public.html">Личный кабинет</a>
+          <a href="/">Главная</a>
+          <a href="/">Каталог</a>
+          <a href="/">Подписка</a>
+          <a href="/">Личный кабинет</a>
           <p style={{width: 150 +'px'}}></p>
       </header>
     )

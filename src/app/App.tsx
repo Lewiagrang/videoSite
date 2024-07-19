@@ -1,4 +1,4 @@
-import Main from "pages/main/index";
+import Main from "pages/main/ui/Main";
 
 
 function App() {
