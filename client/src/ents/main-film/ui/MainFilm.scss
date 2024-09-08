@@ -1,0 +1,32 @@
+.main-film{
+    display: flex;
+    width: 200px;
+    height: 350px;
+    flex-direction: column;
+    margin-left: 2%;
+    .main-card{
+        border: solid 3px rgb(58, 53, 53);
+        width: 200px;
+        height: 300px;
+        margin: 10px;
+        background: 50% 50% no-repeat;
+        background-size: cover;
+    .overview{
+        display: flex;
+        // flex-direction: row;
+        // flex-wrap: nowrap;
+        // justify-content: space-between;
+        } 
+        .year{
+            margin-top: 5%;
+            margin-left: 5%;
+            width: 33%;
+            flex-grow: 2;
+        }
+        .rating{
+            margin-top: 5%;
+            width: 33%;
+        }
+    }
+}
+
