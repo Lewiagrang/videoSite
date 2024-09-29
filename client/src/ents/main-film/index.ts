@@ -1,2 +1,2 @@
-import MainFilm from "./ui/MainFilm";
-export {MainFilm}
+import MainCard from "./ui/MainCard";
+export {MainCard}

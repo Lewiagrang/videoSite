@@ -1,13 +1,19 @@
 import "./MainFilms.scss"
 import { useEffect, useState } from "react";
-import { MainFilm } from "ents/main-film/index"
+import { MainCard } from "ents/main-film/index"
 
-
+interface IcardMain {
+    urlImg?: string;
+    year?: string;
+    rating?: string;
+    title?:  string;
+    map: any;
+  }
 
 function MainFilms(){
 
       
-  const [state, setState] = useState([]);
+  const [state, setState] = useState<IcardMain>([]);
 
     const callBackendAPI = async () => {
         const response = await fetch('http://localhost:5000/cardmain');
@@ -27,8 +33,8 @@ function MainFilms(){
     }, [])
 
 
-    let listItems = state.map((urlImg)=>
-        <MainFilm url={urlImg[0]} rating={urlImg[1]} year={urlImg[2]} />
+    let listItems = state.map((cardMain)=>
+        <MainCard url={cardMain.urlImg} rating={cardMain.rating} year={cardMain.year} title={cardMain.title}/>
     )
     return(
     <div className="main-films">

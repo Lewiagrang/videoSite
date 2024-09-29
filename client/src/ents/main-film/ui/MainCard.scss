@@ -1,0 +1,46 @@
+.main-card{
+    width: 200px;
+    height: 390px;
+    margin: 10px;
+    margin-bottom: -20px;
+    .img_year_rating{
+        width: 200px;
+        height: 300px;
+        flex-direction: column;
+        margin-left: 2%;
+        margin: 10px;
+        margin-bottom: -6px;
+        background: 50% 50% no-repeat;
+        background-size: cover;
+        align-items:flex-start;
+        margin-bottom: 0%;
+        .year{
+            position: static;
+            float: left;
+            width: 33%;
+            margin-top: 134%;
+            background-color: rgba(0, 0, 0, 0.73);
+            border-top-right-radius: 5px;
+            padding-left: 3%;
+            height: auto;
+        }
+        .rating{
+            position: static;
+            margin-top: 134%;
+            padding-left: 1.5%;
+            background-color: rgba(0, 0, 0, 0.73);
+            border-top-left-radius: 5px;
+            float: right;
+            width: 36%;
+            margin-left: 30%;   
+        }
+    }
+    .title{
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        background-color: rgba(32, 31, 31, 0.568);
+        width: 200px;
+        border-radius: 0px 0px 14px 14px;
+    }
+}

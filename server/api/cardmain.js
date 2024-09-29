@@ -8,7 +8,6 @@ const getCardMain = async () => {
           url: "https://w140.zona.plus/",
       })
       .catch(err => console.error(err))
-  
       
       const root = HTMLParser.parse(axiosResponse.data);
   
@@ -18,24 +17,38 @@ const getCardMain = async () => {
   
       let forYearsAndRating = root.querySelectorAll(".desc")
       let preYearsAndRaiting = forYearsAndRating.map((value)=>value.toString())
-      let yearsAndRatingData = preYearsAndRaiting.map((x)=>[x.replace(/ /g, "").split(/\n/g)[1], x.replace(/ /g, "").split(/\n/g)[2]])
-      let yearsAndRating = yearsAndRatingData.map((x)=>[x[0].replace(/.*">/, "").replace(/..span>/, ""), x[1].replace(/.*">/, "").replace(/..span>/, "")])
+      let yearsAndRatingData = preYearsAndRaiting.map((value)=>[value.replace(/ /g, "").split(/\n/g)[1], value.replace(/ /g, "").split(/\n/g)[2]])
+      let yearsAndRating = yearsAndRatingData.map((value)=>[value[0].replace(/.*">/, "").replace(/..span>/, ""), value[1].replace(/.*">/, "").replace(/..span>/, "")])
+
+      let forTitle = root.querySelectorAll(".description")
+      let preTitle = forTitle.map((value)=>value.toString())
+      let title = preTitle.map((value)=>value.replace(/.*name">/s, "").replace(/<.*/s, ""))
       
+      let forUrlFilm = root.querySelectorAll(".results-item-wrap")
+      let preUrlFilm = forUrlFilm.map((value)=>value.toString())
+      let urlFilm = preUrlFilm.map((value)=>value.replace(/.*itemprop="url" href="/s, "").replace(/" title.*/s, "")) 
+
       for(let i = urlsImg.length;  urlsImg[i-1].includes("trailer"); i--){
         urlsImg.pop()
         yearsAndRating.pop()
+        title.pop()
+        urlFilm.pop()
       }
 
   
       let cardsArray = urlsImg.map(
         (value, index)=>
-            [
-              value, 
-              yearsAndRating[index][0], 
-              yearsAndRating[index][1]
-            ]
+            
+          Object.fromEntries([
+                  ["urlImg", value],
+                  ["rating", yearsAndRating[index][0]],
+                  ["year", yearsAndRating[index][1]],
+                  ["title", title[index]],
+                  ["urlFilm", urlFilm[index]]
+              ])
+            
   
-      )
+      );
       
   
       return cardsArray

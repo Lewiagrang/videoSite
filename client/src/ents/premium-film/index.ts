@@ -1,2 +1,2 @@
-import PremiumFilm from "./ui/PremiumFilm";
-export {PremiumFilm}
+import PremiumCard from "./ui/PremiunCard";
+export {PremiumCard}
